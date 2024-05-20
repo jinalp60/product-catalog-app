@@ -1,1 +1,16 @@
-.AddProduct {}
+.AddProduct {
+    padding: 1%;
+    width: 25%;
+    margin-left: auto; 
+    margin-right: auto;
+    .title {
+        margin-left: 30%;
+    }
+    .textField, .formControl, .formGroup {
+        margin: 1.5%
+    }
+    .addProductBtn {
+        margin: 1.5%;
+        margin-left: 30%
+    }
+}

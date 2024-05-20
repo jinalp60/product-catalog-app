@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './Page404.module.css';
 
 const Page404 = () => (
@@ -8,7 +8,7 @@ const Page404 = () => (
   </div>
 );
 
-Page404.propTypes = {};
+// Page404.propTypes = {};
 
 Page404.defaultProps = {};
 
