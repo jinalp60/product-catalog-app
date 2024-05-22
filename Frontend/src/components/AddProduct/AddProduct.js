@@ -7,6 +7,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormLabel from '@mui/material/FormLabel';
 import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
+import axios from 'axios';
 // import PropTypes from 'prop-types';
 
 import styles from './AddProduct.module.css';
@@ -22,10 +23,20 @@ const AddProduct = () => {
 
   const [addProductData, setAddProductData] = useState(initialProductState);
 
-  const handleAddProduct = (e) => {
+
+  const handleAddProduct = async (e) => {
     e.preventDefault();
     // Perform logic here with productData
     console.log('Add Produt data:', addProductData);
+    try {
+      const res = await axios.post('http://127.0.0.1:8000/addProduct', addProductData);
+      console.log(res.data)
+      if (!res.data.success) {
+        throw new Error('Error fetching data from server');
+      }
+    } catch (error) {
+      console.log("Error fetching data from server - handle")
+    }
     setAddProductData(initialProductState)
   };
 

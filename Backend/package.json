@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "product-catalog-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinalp60/product-catalog-app.git"
+  },
+  "author": "jinalp60@yahoo.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinalp60/product-catalog-app/issues"
+  },
+  "homepage": "https://github.com/jinalp60/product-catalog-app#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
