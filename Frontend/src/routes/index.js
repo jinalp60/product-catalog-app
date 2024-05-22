@@ -16,7 +16,7 @@ const AddProduct = React.lazy(() => import("../../src/components/AddProduct/AddP
 
 const routes = [
     { path: PathConstants.HOME, exact: true, element: <Navigate to="/products" /> },
-    { path: PathConstants.PRODUCTS, element: <Products products={PRODUCTS} /> },
+    { path: PathConstants.PRODUCTS, element: <Products /> },
     { path: PathConstants.ADDPRODUCT, element: <AddProduct /> },
 ]
 
