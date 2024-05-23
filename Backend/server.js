@@ -92,6 +92,39 @@ app.patch('/updateProduct', (req, res, next) => {
 
 })
 
+app.delete('/removeProduct/:name', (req, res, next) => {
+    console.log("remove product user req:", req.params.name);
+    let flag = false;
+
+    for (let i=0; i< products.length; i++) {
+        if (req.params.name === products[i].name) {
+            flag = true;
+            products.splice(i, 1);
+            break;
+        }
+    }
+
+    if (flag) {
+        console.log(products);
+        const data = JSON.stringify(products);
+
+        fs.writeFile('./DB.json', data, 'utf8', (err) => {
+
+            if (err) {
+                console.log(`Error writing file: ${err}`);
+                res.status(200).json({ message: "error removing product" , isDeleted: false});
+            } else {
+                console.log(`File is written successfully!`);
+                res.status(200).json({ isDeleted: true });
+            }
+        });
+    } else {
+        console.log("Product not found");
+        res.status(200).json({ isDeleted: false });
+    }
+
+})
+
 const server = app.listen(8000, function () {
     const host = server.address().address
     const port = server.address().port
