@@ -1,5 +1,5 @@
 .ProductTable {
-    padding: 1%;
+    padding: 2%;
     width: 30%;
     margin-left: auto; 
     margin-right: auto;
@@ -10,6 +10,6 @@
     }
     .searchBar {   
         border: 1px solid;
-        margin-bottom: 2%;
+        margin-bottom: 4%;
     }
 }

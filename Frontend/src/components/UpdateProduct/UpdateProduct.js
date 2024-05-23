@@ -88,7 +88,7 @@ const UpdateProduct = () => {
     <div className={styles.UpdateProduct} data-testid="UpdateProduct">
       <h2 className={styles.title}>Update Product</h2>
       <form onSubmit={handleUpdateProduct}>
-        <FormControl variant="filled" className={styles.textField} fullWidth>
+        <FormControl variant="filled" className={styles.formControl} fullWidth>
           <InputLabel id="product-name">Name</InputLabel>
           <Select
             labelId="product-name-label"
@@ -133,7 +133,7 @@ const UpdateProduct = () => {
         </FormControl>
 
         <FormGroup className={styles.formGroup}>
-          <FormControlLabel control={<Checkbox name="stocked" defaultChecked checked={updateProductData.stocked} onChange={handleChangeStocked} />} label="Stocked" />
+          <FormControlLabel control={<Checkbox name="stocked" checked={updateProductData.stocked} onChange={handleChangeStocked} />} label="Stocked" />
         </FormGroup>
 
         <Button className={styles.updateProductBtn} type="submit" variant="contained" color="primary">

@@ -50,7 +50,7 @@ const ProductTable = () => {
     <div className={styles.ProductTable} data-testid="ProductTable">
       <SearchBar
         className={styles.searchBar}
-        width='350px'
+        width='480px'
         value={searched}
         onChange={(searchVal) => requestSearch(searchVal)}
         onCancelResearch={() => cancelSearch()}
@@ -62,6 +62,7 @@ const ProductTable = () => {
               <TableCell>Name</TableCell>
               <TableCell>Price</TableCell>
               <TableCell>Category</TableCell>
+              <TableCell>Stocked</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -73,6 +74,7 @@ const ProductTable = () => {
                 </TableCell>
                 <TableCell>{product.price}</TableCell>
                 <TableCell>{product.category}</TableCell>
+                <TableCell>{product.stocked ? "Yes" : "No"}</TableCell>
               </TableRow>
             ))}
           </TableBody>
